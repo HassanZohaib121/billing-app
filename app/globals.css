@@ -2,32 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+input,
+select,
+textarea {
+    @apply rounded border p-2 outline-none ring-indigo-300 focus-within:ring dark:text-white dark:bg-gray-800
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.primary-button {
+    @apply text-white bg-gray-900 px-6 py-4 flex flex-row justify-center hover:bg-white hover:text-black
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.default-button {
+    @apply rounded bg-black py-2 px-3 text-white hover:text-red-800 shadow outline-none hover:bg-white active:bg-gray-300 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-700
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.default-button-add {
+    @apply rounded bg-black py-2 px-3 text-white hover:text-green-800 shadow outline-none hover:bg-white active:bg-gray-300 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-700
 }

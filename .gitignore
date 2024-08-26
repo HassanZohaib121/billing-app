@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.env
 
 # testing
 /coverage
@@ -12,6 +13,12 @@
 # next.js
 /.next/
 /out/
+
+# database
+/app/Database/shop.db
+/Backupdatabase
+
+start.bat
 
 # production
 /build
